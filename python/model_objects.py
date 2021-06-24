@@ -1,6 +1,17 @@
 from enum import Enum
 
-
+#pair two product for initializing discount
+class pairproductspackage:
+    def __init__(self,pair ,price):
+        self.pair = pair
+        pair.pair = pair
+        self.price = price
+        
+#total price of pair products
+class pairprice:
+    def __init__(product):
+        if product == pairproductspackage.pair:
+            pairprices = unit_price.price + pairproductspackage.price 
 class Product:
     def __init__(self, name, unit):
         self.name = name
@@ -23,6 +34,8 @@ class SpecialOfferType(Enum):
     TEN_PERCENT_DISCOUNT = 2
     TWO_FOR_AMOUNT = 3
     FIVE_FOR_AMOUNT = 4
+    #
+    PAIR_PRO = 5
 
 class Offer:
     def __init__(self, offer_type, product, argument):
