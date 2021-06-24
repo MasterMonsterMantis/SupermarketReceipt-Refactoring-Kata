@@ -63,6 +63,9 @@ class ShoppingCart:
                     discount_total = unit_price * quantity - (
                                 offer.argument * number_of_x + quantity_as_int % 5 * unit_price)
                     discount = Discount(p, str(x) + " for " + str(offer.argument), -discount_total)
+                 #new feature   
+                 if offer.offer_type == SpecialOfferType.PAIR_PRO and quantity_as_int > 2:
+                    discount_total = ((pairprice.pairprices * quantity)*9)/10
 
                 if discount:
                     receipt.add_discount(discount)
